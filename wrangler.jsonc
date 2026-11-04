@@ -1,0 +1,10 @@
+// Static-assets Worker serving the built docs. The deploy workflow passes
+// --name per environment (CF_WORKER_NAME), overriding "name" below.
+{
+	"name": "sproutfoundry-docs",
+	"compatibility_date": "2026-10-01",
+	"assets": {
+		"directory": "./dist",
+		"not_found_handling": "404-page"
+	}
+}

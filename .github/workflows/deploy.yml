@@ -1,0 +1,78 @@
+# Builds the docs and deploys them as a Cloudflare static-assets Worker
+# (wrangler.jsonc).
+#
+#   push to main       → GitHub environment "production"
+#   push to any branch → a preview version of the Worker at its own URL; the
+#                        live docs are not changed
+#
+# This repository is public, so the job runs on GitHub-hosted runners (never
+# the organisation's self-hosted ones) and only on pushes to this repository:
+# pull requests from forks build nothing here and never see the secrets.
+#
+# Environment variables: SITE_URL (this site's origin), MARKETING_URL (the
+# product site, for /pricing/), CF_WORKER_NAME. Repository secrets:
+# CLOUDFLARE_API_TOKEN ("Workers Scripts: Edit"), CLOUDFLARE_ACCOUNT_ID.
+
+name: deploy
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  # @sprout-foundry/design (the shared tokens and brand theme) comes from
+  # GitHub Packages, which needs a token even to read.
+  packages: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name == 'main' && 'production' || 'development' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          MARKETING_URL: ${{ vars.MARKETING_URL }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for v in SITE_URL MARKETING_URL; do
+            if [ -z "${!v}" ]; then echo "::error::environment variable $v is not set"; exit 1; fi
+          done
+          npm ci
+          npm run build
+
+      - name: Deploy to Cloudflare
+        if: github.ref_name == 'main'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          wranglerVersion: "4.147.0"
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --name=${{ vars.CF_WORKER_NAME }}
+
+      - name: Preview alias
+        if: github.ref_name != 'main'
+        id: alias
+        run: echo "alias=$(echo '${{ github.ref_name }}' | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9-' '-' | sed 's/-*$//' | cut -c1-40)" >> "$GITHUB_OUTPUT"
+
+      - name: Upload a preview version
+        if: github.ref_name != 'main'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          wranglerVersion: "4.147.0"
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: versions upload --name=${{ vars.CF_WORKER_NAME }} --preview-alias=${{ steps.alias.outputs.alias }}

@@ -1,0 +1,52 @@
+/* The Sprout Foundry brand on Starlight: the shared design tokens and brand
+   theme (the same package the app and the marketing site use), with
+   Starlight's colour scale bound to them. Starlight sets data-theme on <html>
+   exactly like the tokens expect, so both themes follow. */
+@import '@sprout-foundry/design/tokens.css';
+@import '@sprout-foundry/design/brand.css';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/bricolage-grotesque';
+
+:root,
+:root[data-theme='light'] {
+	--sl-color-accent-low: color-mix(in srgb, var(--accent-primary) 18%, var(--bg-secondary));
+	--sl-color-accent: var(--accent-primary);
+	--sl-color-accent-high: var(--text-accent);
+
+	--sl-color-white: var(--text-primary);
+	--sl-color-gray-1: var(--text-primary);
+	--sl-color-gray-2: var(--text-secondary);
+	--sl-color-gray-3: var(--text-tertiary);
+	--sl-color-gray-4: var(--text-muted);
+	--sl-color-gray-5: var(--border-strong);
+	--sl-color-gray-6: var(--bg-tertiary);
+	--sl-color-gray-7: var(--bg-primary);
+	--sl-color-black: var(--bg-secondary);
+
+	--sl-color-bg-nav: var(--bg-secondary);
+	--sl-color-bg-sidebar: var(--bg-secondary);
+	--sl-color-hairline: var(--border-subtle);
+	--sl-color-hairline-light: var(--border-subtle);
+	--sl-color-hairline-shade: var(--border-default);
+
+	--sl-font: var(--font-sans);
+	--sl-font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Display type for titles and section headings, as on the site and app. */
+h1,
+.sl-markdown-content h2 {
+	font-family: var(--font-display);
+	letter-spacing: -0.02em;
+}
+h1 {
+	font-weight: 800;
+}
+
+/* The primary call to action (hero buttons): the app's leaf pill. */
+.sl-link-button.primary {
+	background: var(--brand-leaf-gradient);
+	border: 0;
+	color: var(--brand-ink);
+	font-weight: 700;
+}
