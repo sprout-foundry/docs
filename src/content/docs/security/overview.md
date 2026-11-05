@@ -33,13 +33,12 @@ git history.
 
 Under **Account settings → Activity & audit**, each account sees what was
 recorded for it: **model calls** (provider, model, role, token counts) and
-**security events**, filterable by project, time and provider. Team owners see
-the same for their team.
+**security events**, filterable by project, time and provider.
 
 ## Data location and retention
 
 - Workspaces and project data are hosted in the **United States and Canada**.
-- With [Private compute](/guides/private-compute/) (Pro and Team add-on),
+- With [Private compute](/guides/private-compute/) (a Pro add-on),
   managed model calls go only to **zero-data-retention** models, and work runs
   only on Sprout's own machines.
 - Calls made with [your own model keys](/guides/bring-your-own-keys/) go to your

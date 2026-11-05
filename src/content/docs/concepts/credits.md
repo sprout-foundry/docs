@@ -27,7 +27,8 @@ task shows what it cost.
 
 ## Allowances and packs
 
-- **Paid plans** include a monthly allowance that refreshes every billing cycle.
+- **Paid plans** (Lite, Pro) include a monthly allowance that refreshes every
+  billing cycle.
 - **Credit packs** are bought once and never expire. Your monthly allowance is
   always used first, so packs only cover what goes beyond it.
 - **The Free plan** has a hard cap: when it runs out, nothing is charged. Keep
@@ -41,4 +42,8 @@ until you buy a pack or your allowance refreshes.
 - Set a **credit budget** on a feature or a task with the `set_budget`
   [MCP tool](/reference/mcp-tools/); work pauses with the reason shown when it's
   used up.
-- Your account's usage page shows your allowance, packs and pace.
+- Set a **daily credit cap** on your usage page to stop one heavy day from
+  eating the month. When it's reached, managed-model use pauses until midnight
+  UTC, and you can resume for the rest of the day from the same page.
+- Your account's usage page shows your allowance, packs and pace, and warns you
+  as you approach the end of your allowance.

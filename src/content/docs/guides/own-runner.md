@@ -32,9 +32,10 @@ sprout runner link
 ```
 
 This opens a page on Sprout asking you to approve the link; it shows the
-machine's name, its operating system and the mode it reports. Approve it while
-signed in to your account. On a machine without a browser (an SSH session, a
-server), add `--no-browser` and open the printed link on any device.
+machine's name, its operating system and the isolation mode you've chosen on
+it. Approve it while signed in to your account. On a machine without a browser
+(an SSH session, a server), add `--no-browser` and open the printed link on any
+device.
 
 Useful options:
 

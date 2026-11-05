@@ -5,7 +5,7 @@ sidebar:
   order: 6
 ---
 
-**Private compute** is an add-on for the Pro and Team plans. With it on:
+**Private compute** is an add-on for the Pro plan. With it on:
 
 - managed model calls go **only to zero-data-retention models**, and
 - your workspaces and tasks run **only on Sprout's own machines**, never on
@@ -15,8 +15,7 @@ It also gives your work priority on our machines.
 
 ## Turn it on
 
-Open **Account settings → Private compute** and add it to your plan. On a team,
-the owner manages it for the team.
+Open **Account settings → Private compute** and add it to your plan.
 
 ## Good to know
 

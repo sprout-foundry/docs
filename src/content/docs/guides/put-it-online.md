@@ -11,16 +11,19 @@ and choose **Put it online**.
 ## Previews
 
 A **preview** shows the current version of your app at a link you can share.
-Anyone with the link can open it, and search engines skip it. Previews are free;
-preview links expire after a while, and you can make a new one at any time.
+Anyone with the link can open it, and search engines skip it. Every plan
+includes previews, with a monthly allowance of preview requests on the Free
+plan; past it, previews show a monthly-limit page until the allowance resets.
+Preview links expire after a while, and you can make a new one at any time.
+The amounts are on the [pricing page](/pricing/).
 
 ## Make it live
 
 Choose **Make it live** to put the current version online for everyone at your
-app's address. Going live is part of the paid plans; each paid plan includes a
-monthly allowance of requests to your live apps, shared by all of them, and
-traffic beyond it uses credits. See [Credits](/concepts/credits/) and the
-[pricing page](/pricing/).
+app's address. Going live is part of the paid plans (Lite and up); each paid
+plan includes a monthly allowance of requests to your live apps, shared by all
+of them, and traffic beyond it uses credits. See [Credits](/concepts/credits/)
+and the [pricing page](/pricing/).
 
 ## Go back to an earlier version
 

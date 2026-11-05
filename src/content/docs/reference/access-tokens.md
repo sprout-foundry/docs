@@ -6,8 +6,12 @@ sidebar:
 ---
 
 A **personal access token** lets a tool act on your account without your
-password — for example Claude Code through the [MCP server](/guides/mcp-claude-code/).
-Access tokens are available on the Pro and Team plans.
+password — for example your coding agent through the
+[MCP server](/guides/connect-your-agent/).
+Access tokens are available on the Pro plan.
+
+A token is also a **git credential**: paste it as the password when cloning or
+pushing to a platform project over HTTPS.
 
 ## Create and revoke
 
@@ -22,13 +26,16 @@ created.
 
 ## Scopes
 
-A token carries scopes that limit what it can do:
+A token carries scopes that limit what it can do. A token created from
+**Account settings → Developer** gets every scope below.
 
 | Scope | Allows |
 |---|---|
 | `projects:read` | Listing your projects. |
 | `tasks:read` | Reading tasks: their state, summary, diff and output, and waiting on them. |
 | `tasks:write` | Adding, cancelling, retrying, answering and reordering tasks; setting budgets; opening pull requests. |
+| `git:read` | Cloning and fetching a platform project over HTTPS. |
+| `git:write` | Pushing to a platform project over HTTPS. |
 
 Each [MCP tool](/reference/mcp-tools/) lists the scope it needs.
 

@@ -19,15 +19,18 @@ on your own repository, push your local changes before you hand a task over.
 
 ## The queue
 
-Each project runs its tasks **one at a time, in order**. A task asked for while
-another is running waits its turn and starts when the one before it is done.
+Each project runs its tasks **in order, one at a time** — except that tasks
+marked to run alongside others can fill your plan's run limit, so a paid plan
+may run two at once. A task asked for while another is running waits its turn
+and starts when the one before it is done. See the
+[pricing page](/pricing/) for each plan's limit.
 
 On the board, cards move through:
 
 | Column | What it means |
 |---|---|
 | **Shaping** | Ideas you or the planner want to look at before they run. Nothing starts from here; make a card ready when it says what you want. |
-| **Ready** | These run one after another, in this order, when nothing else is running. |
+| **Ready** | These run one after another, in this order, when nothing else is running. On plans with more than one run at a time, tasks marked to run alongside others start side by side. |
 | **Running** | Being built, checked and reviewed right now. |
 | **Needs you** | Stopped for you: a question to answer, or something that didn't work, with what to do next. |
 | **Done** | Finished and added to your project. |
@@ -55,6 +58,6 @@ start. Budgets are set through the [MCP tools](/reference/mcp-tools/)
 ## Task states
 
 Tools and the API report a task's state as one of: `pending`, `running`,
-`completed`, `failed`, `timeout`, `cancelled`, `needs_input` (waiting on an
-answer), `revising` (a review fix is under way) or `handed_off` (stopped at its
-time limit; its next run carries on).
+`completed`, `failed`, `error` (it stopped with an internal fault), `timeout`,
+`cancelled`, `needs_input` (waiting on an answer), `revising` (a review fix is
+under way) or `handed_off` (stopped at its time limit; its next run carries on).

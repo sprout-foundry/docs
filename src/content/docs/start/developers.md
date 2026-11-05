@@ -40,13 +40,14 @@ Add your provider keys under **Account settings → Keys & providers**. Model
 calls made with your own key go to your provider, on your account, and use no
 credits. See [Use your own model keys](/guides/bring-your-own-keys/).
 
-## 5. Drive it from your tools (Pro and Team)
+## 5. Drive it from your tools (Pro)
 
-Create an access token and add the MCP server to Claude Code or another MCP
-client; your tool can then list projects, add tasks, wait for them and read
-their results and diffs. See [Use Sprout from Claude Code](/guides/mcp-claude-code/).
+Create an access token and add the MCP server to Claude Code, Cursor or any
+other MCP client; your tool can then list projects, add tasks, wait for them
+and read their results and diffs. See
+[Connect your coding agent](/guides/connect-your-agent/).
 
-## 6. Run tasks on your own machine (paid plans)
+## 6. Run tasks on your own machine (Lite and up)
 
 Link a machine with `sprout runner` and tasks can run there instead of on ours.
 See [Run tasks on your own machine](/guides/own-runner/).

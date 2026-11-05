@@ -42,7 +42,8 @@ something, describe the change under **What should change?** and choose
 ## 4. Put it online
 
 Choose **Put it online** to give your app its own address and share it. Previews
-are free; going live is part of the paid plans. See
+are included on every plan, with a monthly allowance of preview requests on the
+Free plan; going live is part of the paid plans. See
 [Put your app online](/guides/put-it-online/).
 
 ## What it costs

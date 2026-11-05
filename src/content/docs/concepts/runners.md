@@ -15,8 +15,9 @@ of your own with `sprout runner` — see
 - A task on **one of your own repositories** (GitHub, GitLab, Codeberg) goes to
   your linked runner when it's online and has free capacity, and to our
   machines otherwise.
-- A task on a **project Sprout hosts** always runs on our machines: a runner of
-  your own can't reach the platform's internal repositories.
+- A task on a **project Sprout hosts** always runs on our machines: those
+  repositories live on Sprout's internal git server, which a runner of your own
+  can't reach.
 
 ## How your runner isolates work
 
@@ -33,4 +34,5 @@ Your runner runs workspaces in one of three modes, chosen on the machine with
 
 A runner reports in every 30 seconds. It shows as **online** when it has room
 for another task, **busy** when it's at capacity, and **offline** when it hasn't
-reported for two minutes. How many runners you can link depends on your plan.
+reported for two minutes. The Free plan can't link a runner; the paid plans
+allow one or more — see the [pricing page](/pricing/).

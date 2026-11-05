@@ -17,6 +17,8 @@ export default defineConfig({
 	// redirect carries the reader there, so no domain is written in a page.
 	redirects: {
 		'/pricing': `${marketingUrl}/pricing/`,
+		// The page used to be Claude Code specific; it covers any MCP client now.
+		'/guides/mcp-claude-code': '/guides/connect-your-agent/',
 	},
 	integrations: [
 		starlight({

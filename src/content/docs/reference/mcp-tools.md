@@ -54,15 +54,17 @@ when cut). **Scope:** `tasks:read`. **Inputs:** `task_id` (required).
 ### `get_task_logs`
 
 The end of what the agent wrote while it worked on the task — its own report,
-for when the summary isn't enough. **Scope:** `tasks:read`. **Inputs:**
-`task_id` (required).
+for when the summary isn't enough. Cut to the last 16 KB, with a note when cut.
+**Scope:** `tasks:read`. **Inputs:** `task_id` (required).
 
 ### `wait_for_tasks`
 
 Wait (up to about a minute) until any of the given tasks changes state or
 finishes, then return their states. Call it again to keep waiting; use it
-instead of polling `get_task`. **Scope:** `tasks:read`. **Inputs:** `task_ids`
-(required, 1–50); `timeout_seconds` (1–55, default 55).
+instead of polling `get_task`. A task that stops to ask you something counts as
+finished here, so check the returned states for `needs_input` before assuming
+the work is done. **Scope:** `tasks:read`. **Inputs:** `task_ids` (required,
+1–50); `timeout_seconds` (1–55, default 55).
 
 ## Steering work
 
@@ -110,5 +112,6 @@ call is refused. `0` removes the budget. **Scope:** `tasks:write`. **Inputs:**
 
 ### `open_change_request`
 
-For a project on GitHub or GitLab, open the pull request for a finished task's
-changes. **Scope:** `tasks:write`. **Inputs:** `task_id` (required).
+For a project on GitHub, GitLab or Codeberg, open the pull request (or merge
+request) for a finished task's changes. **Scope:** `tasks:write`. **Inputs:**
+`task_id` (required).
