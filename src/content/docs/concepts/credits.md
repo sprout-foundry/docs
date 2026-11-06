@@ -21,8 +21,9 @@ task shows what it cost.
 
 ## What doesn't
 
-- **Model calls with your own key** cost no credits — your provider bills you
-  directly. See [Use your own model keys](/guides/bring-your-own-keys/).
+- **Model calls with your own key** in the Developer workspace cost no
+  credits — your provider bills you directly. See
+  [Use your own model keys](/guides/bring-your-own-keys/).
 - **Running the open-source agent yourself** uses no credits at all.
 
 ## Allowances and packs
@@ -31,8 +32,9 @@ task shows what it cost.
   billing cycle.
 - **Credit packs** are bought once and never expire. Your monthly allowance is
   always used first, so packs only cover what goes beyond it.
-- **The Free plan** has a hard cap: when it runs out, nothing is charged. Keep
-  working with your own model keys, or upgrade.
+- **The Free plan** has a hard cap: when it runs out, nothing is charged and
+  work pauses. Upgrade, or run the open-source agent yourself with your own
+  model keys.
 
 There's no metered overage. When your allowance and packs run out, work pauses
 until you buy a pack or your allowance refreshes.

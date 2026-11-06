@@ -1,13 +1,15 @@
 ---
 title: Use your own model keys
-description: Bring your own provider keys; calls made with them use no credits.
+description: Bring your own provider keys to the Developer workspace; calls made with them use no credits.
 sidebar:
   order: 2
 ---
 
-You can use your own API key for any provider Sprout supports. Model calls
-made with your key go to the provider **on your account**, and use **no
-credits** — your provider bills you directly.
+In the **Developer workspace** you can use your own API key for any provider
+Sprout supports. Model calls made there with your key go to the provider **on
+your account**, and use **no credits** — your provider bills you directly.
+
+Tasks and the planner run on Sprout's managed models, which use credits.
 
 ## Add a key
 
