@@ -25,6 +25,9 @@ may run two at once. A task asked for while another is running waits its turn
 and starts when the one before it is done. See the
 [pricing page](/pricing/) for each plan's limit.
 
+You can start up to 10 tasks a minute. A start beyond that is refused with a
+message that says how many seconds to wait before trying again.
+
 On the board, cards move through:
 
 | Column | What it means |
