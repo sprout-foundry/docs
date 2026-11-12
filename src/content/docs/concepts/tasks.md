@@ -32,7 +32,7 @@ On the board, cards move through:
 
 | Column | What it means |
 |---|---|
-| **Shaping** | Ideas you or the planner want to look at before they run. Nothing starts from here; make a card ready when it says what you want. |
+| **Shaping** | Ideas you or Sprout want to look at before they run. Nothing starts from here; make a card ready when it says what you want. |
 | **Ready** | These run one after another, in this order, when nothing else is running. On plans with more than one run at a time, tasks marked to run alongside others start side by side. |
 | **Running** | Being built, checked and reviewed right now. |
 | **Needs you** | Stopped for you: a question to answer, or something that didn't work, with what to do next. |

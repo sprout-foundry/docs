@@ -14,8 +14,10 @@ On the home page, answer **What do you want to build?** in your own words — fo
 example, *"A one-page site for my plant shop with opening hours and a contact
 form."* Then choose **Start**.
 
-The planner asks a few short questions (who it's for, what it should include)
-and agrees a plan with you. Nothing is built until you're happy with the plan.
+Sprout, the agent beside every page, takes the conversation from there: it asks
+a few short questions (who it's for, what it should include) and agrees a plan
+with you, while the plan and a first look take shape on the page. Nothing is
+built until you're happy with the plan.
 
 ## 2. Watch it come together
 

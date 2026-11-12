@@ -9,7 +9,8 @@ In the **Developer workspace** you can use your own API key for any provider
 Sprout supports. Model calls made there with your key go to the provider **on
 your account**, and use **no credits** — your provider bills you directly.
 
-Tasks and the planner run on Sprout's managed models, which use credits.
+Tasks and Sprout's conversations run on Sprout Foundry's managed models, which use
+credits.
 
 ## Add a key
 

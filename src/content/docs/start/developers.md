@@ -27,8 +27,8 @@ changes before you hand a task over.
 ## 3. Run your first task
 
 Open a repository as a project, describe a change, and choose **Run** to start it
-as one task — or **Plan** to have the planner read the code and propose a task
-list you can edit before it runs.
+as one task — or **Plan** to have Sprout read the code and propose a task list
+you can edit before it runs.
 
 Follow your tasks on the **board**: **Shaping** (ideas to look at before they
 run), **Ready** (they run in turn), **Running**, **Needs you** (a question to
