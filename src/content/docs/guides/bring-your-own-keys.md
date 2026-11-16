@@ -12,7 +12,7 @@ your account**, and use **no credits** — your provider bills you directly.
 Tasks and Sprout's conversations run on Sprout Foundry's managed models, which use
 credits. Today these are open-weight models: Qwen3.8 on Sprout Foundry's own
 GPUs, with DeepSeek V4.1 Flash on a zero-data-retention provider when more
-capacity is needed. Both come from Chinese labs; they run on Sprout Foundry's
+capacity is needed, both in the US. Both come from Chinese labs; they run on Sprout Foundry's
 hardware or its provider's, and your work never goes to the labs that made
 them. If a model's origin matters to you, use your own key in the Developer
 workspace, or run the open-source agent yourself with any model.
