@@ -115,3 +115,16 @@ call is refused. `0` removes the budget. **Scope:** `tasks:write`. **Inputs:**
 For a project on GitHub, GitLab or Codeberg, open the pull request (or merge
 request) for a finished task's changes. **Scope:** `tasks:write`. **Inputs:**
 `task_id` (required).
+
+## Reporting a problem
+
+### `report_platform_issue`
+
+Report a problem in Sprout itself — a tool that errors when it shouldn't, a
+task that failed for a reason outside your project's code, or behavior that
+contradicts these tools' descriptions — to the Sprout team. It's filed as a
+support case on your account: you can follow it, and any reply, under
+**Account → Support**. Your saved environment variable values are masked in the
+report. **Scope:** any valid token. **Inputs:** `title` (required, 3–200
+characters); `description` (required, 10–5000 characters: what was done, what
+happened, what was expected, how to reproduce it); `project`; `task_id`.
