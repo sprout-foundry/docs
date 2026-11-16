@@ -38,8 +38,8 @@ cost, its summary, the files it changed and the full diff.
 ## 4. Bring your own keys (optional)
 
 Add your provider keys under **Account settings → Keys & providers**. Model
-calls made with your own key in the Developer workspace go to your provider,
-on your account, and use no credits; tasks run on Sprout's managed models.
+calls made with your own key go to your provider, on your account, and use no
+credits; choose which work runs on it under **Account settings → Models**.
 See [Use your own model keys](/guides/bring-your-own-keys/).
 
 ## 5. Drive it from your tools (Pro)

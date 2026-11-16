@@ -21,8 +21,7 @@ task shows what it cost.
 
 ## What doesn't
 
-- **Model calls with your own key** in the Developer workspace cost no
-  credits — your provider bills you directly. See
+- **Model calls with your own key** cost no credits — your provider bills you directly. See
   [Use your own model keys](/guides/bring-your-own-keys/).
 - **Running the open-source agent yourself** uses no credits at all.
 
