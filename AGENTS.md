@@ -27,3 +27,7 @@ tokens or unreleased plans.
 `npm ci` needs `NODE_AUTH_TOKEN` (GitHub Packages). The lockfile is generated on
 Linux so CI's `npm ci` accepts it; if you add a dependency on macOS, regenerate
 it in a `node:24` container (`npm install --package-lock-only`).
+
+## Comments
+
+Code gets clear names, and comments only where the reason isn't obvious from the code. When you touch old code, trim its comment blocks. Rationale goes in specs and commit messages instead.
