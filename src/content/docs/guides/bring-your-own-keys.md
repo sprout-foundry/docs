@@ -33,12 +33,11 @@ code completion follows that choice.
 ## Sprout Foundry's models
 
 Left on **Auto**, your work runs on Sprout Foundry's managed models, which use
-credits. Today these are open-weight models: Qwen3.8 on Sprout Foundry's own
-GPUs, with DeepSeek V4.1 Flash on a zero-data-retention provider when more
-capacity is needed, both in the US. Both come from Chinese labs; they run on
-Sprout Foundry's hardware or its provider's, and your work never goes to the
-labs that made them. If a model's origin matters to you, choose a model on your
-own key, or run the open-source agent yourself with any model.
+credits: open-weight models chosen for coding value per dollar, on Sprout
+Foundry's own GPUs or on providers whose no-training terms it has verified.
+They change as better ones come along, and your activity trail names the model
+that handled each call. If a model or its origin matters to you, choose a model
+on your own key, or run the open-source agent yourself with any model.
 
 ## Good to know
 
