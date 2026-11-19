@@ -99,8 +99,11 @@ Take a task that hasn't started out of the project's queue, by its queue id.
 ### `start_queued`
 
 Start a waiting task now, by its queue id — for when the queue has stopped after
-a task that didn't work. **Scope:** `tasks:write`. **Inputs:** `project`,
-`queue_id` (both required).
+a task that didn't work. On a project hosted on Sprout Foundry it never starts
+beside a running task: the card is made ready instead and runs in turn. To start
+drafts, use
+`move_queued` with `state: ready`. **Scope:** `tasks:write`. **Inputs:**
+`project`, `queue_id` (both required).
 
 ### `set_budget`
 
