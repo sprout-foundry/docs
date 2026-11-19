@@ -36,9 +36,16 @@ queue id and position (waiting). **Scope:** `tasks:write`.
 
 ### `list_tasks`
 
-A project's recent tasks (newest first) and the ones waiting their turn.
-**Scope:** `tasks:read`. **Inputs:** `project` (required); `status` (only tasks
-in this [state](/concepts/tasks/#task-states)); `limit` (1–50, default 20).
+A project's board as the page shows it: its steps (newest first) and the cards
+waiting their turn. A step is one piece of work shown by its latest run, with a
+retry or a continuation counted as another run of the same step. Each step is in
+its lane: `running`, `needs_you` (with what it needs: a `question` answered, a
+`failed` run looked at, more `time`, or a `stopped` run restarted, and the
+reason when there is one) or `done`. Steps you dismissed from the board are
+left out unless you ask for them.
+**Scope:** `tasks:read`. **Inputs:** `project` (required); `status` (only steps
+whose latest run is in this [state](/concepts/tasks/#task-states)); `limit`
+(1–50, default 20); `include_dismissed` (also list dismissed steps).
 
 ### `get_task`
 
