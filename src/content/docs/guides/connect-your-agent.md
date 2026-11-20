@@ -8,7 +8,7 @@ sidebar:
 Sprout has an MCP server, so your own coding tool can list your projects, add
 tasks, wait for them and read their results and diffs. Any client that speaks
 MCP works — Claude Code, Cursor, VS Code, Windsurf, or an agent you've written
-yourself. Available on the Pro plan.
+yourself. Available on every paid plan.
 
 ## 1. Create an access token
 

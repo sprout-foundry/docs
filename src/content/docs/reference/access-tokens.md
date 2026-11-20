@@ -8,7 +8,7 @@ sidebar:
 A **personal access token** lets a tool act on your account without your
 password — for example your coding agent through the
 [MCP server](/guides/connect-your-agent/).
-Access tokens are available on the Pro plan.
+Access tokens are available on every paid plan.
 
 A token is also a **git credential**: paste it as the password when cloning or
 pushing to a platform project over HTTPS.
