@@ -50,8 +50,11 @@ whose latest run is in this [state](/concepts/tasks/#task-states)); `limit`
 ### `get_task`
 
 A task's state, what it was asked, the plain-words summary of what it did, the
-files it changed, where its changes landed, and the credits it used.
-**Scope:** `tasks:read`. **Inputs:** `task_id` (required).
+files it changed, where its changes landed, and the credits it used. Given a
+card's queue id (from `list_tasks` or `list_open_cards`), it reads the card:
+its state, kind, whole request, feature and what it waits for. A card that has
+started reads as its task. **Scope:** `tasks:read`. **Inputs:** `task_id`
+(required; a task id or a card's queue id).
 
 ### `get_task_diff`
 
